@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Tu Peso en Otro Planeta</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mobile.css">
+	
+</head>
+<body>
+    <header>
+        <h1>Tu Peso En Otro Planeta</h1>
+    </header>
+
+    <main>
+        
+	    <p>En la tierra pesas distinto que en otros Planetas.<br><br> Para conocer cuanto pesarias, ingresa tu peso y elegi el planeta</p>
+
+        <form>
+            <label class="x"> <input id="peso" type="peso" name="peso" placeholder="Escribi tu peso"></label>
+
+            <input type="button" onclick="sub()" value="Enviar"  />
+        </form>
+
+        <h3 id="tierra"></h3>
+        <h4>Elije el Planeta para conocer tu peso en otro planeta!</h4>
+        <div>
+            <img src="img/jupiter.png" alt="Jupiter" title="Jupiter" onclick='jupiter()' >
+            <img src="img/marte.png" alt="Marte" title="Marte" onclick='marte()' >
+            <img src="img/neptuno.png" alt="Neptuno" title="Neptuno" onclick='neptuno()' >
+            <img src="img/saturno.png" alt="Saturno" title="Saturno" onclick='saturno()' >
+            <img src="img/urano.png" alt="Urano" title="Urano" onclick='urano()' >
+            <img src="img/venus.png" alt="Venus" title="Venus" onclick='venus()' >
+            <img src="img/mercurio.png" alt="Mercurio" title="Mercurio" onclick='mercurio()' >            
+        </div>
+        
+        <p id="PesoFinal" >  </p>
+
+    </main>
+
+     <footer>
+            <p>Diseño - Maquetado: <a href="http:/www.linkedin.com/in/ailen-ariosto-10700a183" >Ailen Ariosto</a></p>
+    </footer>
+    <script type="text/javascript" src="js/proyecto3.js"></script>
+</body>
+</html>
