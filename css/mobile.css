@@ -2,17 +2,6 @@
 /* -------------------------------------320Px ------------------------------------------*/
 
 @media screen and (max-width:479px) { 
-
-    header{
-        height: 3%;
-        padding: 3% 0 3%;
-    }
-
-    header h1{
-        font-size: 1em;
-        text-transform: uppercase;
-    }
-
     p{
         font-size: 0.9em;
         margin: 4%;
@@ -28,29 +17,6 @@
     h3,h4{
         margin-top: 7%;
     }
-
-
-    div img{
-        margin-bottom: 0;
-        width: 4em;
-    }
-
-    footer{
-        height: 9%;
-    }
-
-    #PesoFinal{
-        font-size: 1em;
-    }
-
-    div img:hover{
-        transform: rotate(0);
-    }
-
-    div img:active{
-        transform: rotate(360deg);
-    }
-
 }
 
     
@@ -59,25 +25,12 @@
   @media screen and (min-width: 720px) and (max-width:1024px) { 
       
     
-    header{
-        margin-bottom: 15px;
-    }
+    
     form{
         margin-top: 45px;
     }
 
-    #PesoFinal{
-        font-size: 1.8em;
-    }
-
-    div img{
-        margin-bottom: 2%;
-    }
-
-    footer{
-        height: 4%;
-        padding: 2% 0 2% 0;
-    }
+   
    
 
    

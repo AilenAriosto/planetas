@@ -1,17 +1,17 @@
 *{
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body{
-    color: white;
-    min-height: 100vh;
+  color: white;
+  min-height: 100vh;
 }
 
 main{
-    display: grid;
-    grid-template-columns: 2fr 7fr;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  min-height: 100vh;
 }
 
 video{
@@ -36,40 +36,37 @@ video{
 }
 
 /* ---------------------------main_sectionOne--------------------------------- */
-
 .main_sectionOne{
-    padding: 20px 20px 0 20px;
-    display: grid;
-    z-index: 2; 
-    background-color: rgba(0, 0, 0, 0.4);
-    text-align: center;
+  padding: 20px 20px 0 20px;
+  display: grid;
+  z-index: 2; 
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
-
 .main_sectionOne_form__input {
-    width: 60%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 .main_sectionOne_form__button{
-    background-color: #f1f1f1;
-    color: black;
-    font-size: 16px;
-    padding: 16px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .main_sectionOne_form__button:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
-
 /* ---------------------------main_sectionTwo--------------------------------- */
 .main_sectionTwo{
   display: grid;
@@ -100,7 +97,6 @@ video{
 }
 
 /* ---------------------------animations--------------------------------- */
-
 @keyframes rotate {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
@@ -110,10 +106,10 @@ video{
   to {-webkit-transform: rotate(360deg);}
 }
 .main_sectionTwo__img{
-    -webkit-animation: 3s rotate linear infinite;
-    animation: 3s rotate linear infinite;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 /* ---------------------------responsive--------------------------------- */
@@ -122,8 +118,6 @@ video{
     grid-template-columns: 3fr 6fr;
   }
 }
-
-
 @media(min-width:200px)and (max-width:699px){
   .main_sectionTwo_result{
     display: initial;
@@ -132,4 +126,4 @@ video{
   main{
     grid-template-columns: 1fr;
   }
-} 
+}
