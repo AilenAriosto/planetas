@@ -1,39 +1,84 @@
-var planetas = [g_tierra = 9.8,g_marte = 3.7,g_jupiter = 24.8,g_saturno = 10.44,g_neptuno = 11.15,g_urano = 8.87,g_venus = 8.87,g_mercurio =3.7]
+var tierra = {
+    nombre : 'Tierra',
+    peso : 9.8
+}
 
-function pesoUsuario(){
+var marte = {
+    nombre : 'Marte',
+    peso : 3.7,
+    imagen : 'https://i.imgur.com/s5N5B6N.png'
+}
+
+var jupiter = {
+    nombre : 'Jupiter',
+    peso : 24.8,
+    imagen : 'https://i.imgur.com/6uQx8Oy.png'
+}
+
+var saturno = {
+    nombre : 'Saturno',
+    peso : 10.44,
+    imagen : 'https://i.imgur.com/h9DAP9c.png'
+}
+
+var neptuno = {
+    nombre : 'Neptuno',
+    peso : 11.15,
+    imagen: 'https://i.imgur.com/uQrPE5a.png'
+}
+
+var urano = {
+    nombre : 'Urano',
+    peso : 8.87,
+    imagen : 'https://i.imgur.com/dxgpppG.png'
+}
+
+var venus = {
+    nombre : 'Venus',
+    peso : 8.87,
+    imagen : 'https://i.imgur.com/fls1ZTd.png'
+}
+
+var mercurio = {
+    nombre : 'Mercurio',
+    peso : 3.7,
+    imagen : 'https://i.imgur.com/yd5imjf.png'
+}
+
+var planetas = [tierra,mercurio,venus]
+
+const pesoUsuario = () => {
     usuarioPeso = document.getElementById("peso").value;
     document.getElementById('tierra').innerHTML='Tu Peso En La Tierra es de ' + usuarioPeso + ' Kilos';
-   
 }
-function calcularPesoPlanetasOne(){
-    var usuarioPeso = pesoUsuario();
-    var pesoFinalJupiter = parseInt( this.usuarioPeso * g_jupiter / g_tierra);
-    var pesoFinalMarte = parseInt( this.usuarioPeso * g_marte / g_tierra);
-    var pesoFinalNeptuno = parseInt( this.usuarioPeso * g_neptuno / g_tierra);
-    var pesoFinalSaturno = parseInt( this.usuarioPeso * g_saturno / g_tierra);
-    var pesoFinalUrano = parseInt( this.usuarioPeso * g_urano / g_tierra);
-    var pesoFinalVenus = parseInt(this.usuarioPeso * g_venus / g_tierra);
-    var pesoFinalMercurio = parseInt( this.usuarioPeso * g_mercurio / g_tierra); 
 
-    var planetasOne = document.getElementById("listOne");
-    var planetasTwo = document.getElementById("listTwo");
+const calcular = (planeta) => {
+    let pesoFinal = parseInt( this.usuarioPeso * ( planeta / tierra.peso ))
+    return pesoFinal
+}
+
+const calcularPesoPlanetas = () => {
+    pesoUsuario();
+    let planetasOne = document.getElementById("listOne");
+    let planetasTwo = document.getElementById("listTwo");
+    
     planetasOne.innerHTML = `
         <ul class="main_sectionTwo_list">
-            <li><img class="main_sectionTwo__img" src="https://i.imgur.com/6uQx8Oy.png" alt="jupiter" /> Tu peso en Jupiter sería: ${pesoFinalJupiter}</li>
-            <li><img  class="main_sectionTwo__img" src="https://i.imgur.com/yd5imjf.png" alt="Mercurio" /> Tu peso en Mercurio sería: ${pesoFinalMercurio} </li>
-            <li><img  class="main_sectionTwo__img" src="https://i.imgur.com/uQrPE5a.png" alt="Neptuno" /> Tu peso en Neptuno sería:  ${pesoFinalNeptuno}</li>
-            <li><img  class="main_sectionTwo__img" src="https://i.imgur.com/s5N5B6N.png" alt="Marte" /> Tu peso en Marte sería: ${pesoFinalMarte}</li>
+            <li><img class="main_sectionTwo__img" src="${ jupiter.imagen }" alt="jupiter" /> Tu peso en Jupiter sería: ${calcular(jupiter.peso)}</li>
+            <li><img  class="main_sectionTwo__img" src="${ mercurio.imagen }" alt="Mercurio" /> Tu peso en Mercurio sería: ${calcular(mercurio.peso)}</li>
+            <li><img  class="main_sectionTwo__img" src="${ neptuno.imagen }" alt="Neptuno" /> Tu peso en Neptuno sería:  ${calcular(neptuno.peso)}</li>
+            <li><img  class="main_sectionTwo__img" src="${ marte.imagen }" alt="Marte" /> Tu peso en Marte sería: ${calcular(marte.peso)}</li>
         </ul>
     `;
     planetasTwo.innerHTML = `
         <ul class="main_sectionTwo_list">
-            <li><img  class="main_sectionTwo__img" src="https://i.imgur.com/h9DAP9c.png" alt="Saturno" /> Tu peso en Saturno sería: ${pesoFinalSaturno} </li>
-            <li><img  class="main_sectionTwo__img" src="https://i.imgur.com/dxgpppG.png" alt="Urano" /> Tu peso en Urano sería:  ${pesoFinalUrano}</li>
-            <li><img class="main_sectionTwo__img" src="https://i.imgur.com/fls1ZTd.png" alt="Venus" /> Tu peso en Venus sería: ${pesoFinalVenus}</li>
+            <li><img  class="main_sectionTwo__img" src="${ saturno.imagen }" alt="Saturno" /> Tu peso en Saturno sería: ${calcular(saturno.peso)} </li>
+            <li><img  class="main_sectionTwo__img" src="${ urano.imagen }" alt="Urano" /> Tu peso en Urano sería:  ${calcular(urano.peso)}</li>
+            <li><img class="main_sectionTwo__img" src="${ venus.imagen }" alt="Venus" /> Tu peso en Venus sería: ${calcular(venus.peso)}</li>
         </ul>
     `;
-    var usuarioPeso = document.getElementById("peso").value="";
-    
+    let usuarioPeso = document.getElementById("peso").value="";
 }
 
-calcularPesoPlanetasOne();
+
+calcularPesoPlanetas();
