@@ -4,34 +4,27 @@
 	<meta charset="UTF-8">
     <title>Tu Peso en Otro Planeta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <main>
-        <video src="Space.mp4" autoplay loop></video>
-        <div class="overlay"></div>
-        <section class="main_sectionOne">
-            <h1 >Tu Peso en Otro Planeta</h1>
-            <div class="main_sectionOne_form">
-                <p>En la tierra pesas distinto que en otros Planetas.<br><br>Para conocer cuanto pesarias, ingresa tu peso</p><br><br>
-                <label>Escribí tu peso
-                    <input class="main_sectionOne_form__input" type="text" id="peso" placeholder="Escribí tu peso"/><br><br>
-                </label>
-                <button class="main_sectionOne_form__button" onclick="calcularPesoPlanetas()">Enviar</button>
+        <h1 class="main--title">Tu Peso en Otro Planeta</h1>
+        <p class="main--parraf">En la tierra pesas distinto que en otros Planetas, ingresa tu peso para saber cuanto pesarías!</p>
+        <section class="main_section_form">
+            <div class="main_section_form_container">
+                <input class="main_section_form--input" type="text" id="peso" placeholder="Escribí tu peso"/>
+                <div id="buttonContainer">
+                    <a href="#" id="calcular" class="main_section_form--button">
+                        <i class="fas fa-caret-right" id="icon"></i>
+                        <span id="textButton" class="textButton">Calcular</span>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="main_sectionTwo">
-            <h3 class="main_sectionTwo__title" id="tierra"></h3>
-            <div class="main_sectionTwo_result">
-                <div class="listOne" id="listOne"></div>
-                <div class="listTwo" id="listTwo"></div>
-            </div>
-        </section>
+        <section class="main_sectionResult" id="result"></section>
     </main>
-    <script type="text/javascript" src="js/proyecto3.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/proyecto3.js"></script>
 </body>
 </html>
-
-
-
-
