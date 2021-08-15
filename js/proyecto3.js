@@ -9,30 +9,39 @@ let planetas = [
     { nombre: 'Mercurio', peso: 3.7, imagen: 'https://i.ibb.co/TqvXBTJ/mercurio.png'}
 ]
 
+
+// Obtener peso del usuario
+
 const pesoUsuario = () => {
     usuarioPeso = document.getElementById("peso").value;
 }
 
-const calcular = (planeta) => {
-    let pesoFinal = parseInt( this.usuarioPeso * ( planeta / 9.8 ))
-    return pesoFinal
-}
-
 const calcularPesoPlanetas = () => {
-    document.getElementById('result').innerHTML = ""
-    pesoUsuario();
+    document.getElementById('result').innerHTML = "";
+    pesoUsuario()
     for(let p in planetas){
         document.getElementById('result').innerHTML += `
         <div>
         <h4> ${ planetas[p].nombre} </h4>
         <img class="main_sectionResult__img" src="${ planetas[p].imagen }" alt="${planetas[p].nombre}" /> 
         <br>
-        <span>${calcular(planetas[p].peso)}
+        <span>${calcular(planetas[p].peso)}</span>
         </div>
         `
     }
 
-    let usuarioPeso = document.getElementById("peso").value="";
+    usuarioPeso = document.getElementById("peso").value="";
+}
+
+function calcular(planeta) {
+   let pesoFinal = parseInt( this.usuarioPeso * ( planeta / 9.8 ))
+   return pesoFinal
+}
+
+// Función del botón
+
+document.getElementById('calcular').onclick = function(){
+    calcularPesoPlanetas();
 }
 
 // Animacion del Botón 
@@ -54,10 +63,4 @@ button.onmouseleave = function() {
 const hideText = ()=>{
     document.getElementById('textButton').classList.remove('showText')
     document.getElementById('icon').classList.remove('hideIcon')
-}
-
-// Función del botón
-
-document.getElementById('calcular').onclick = function(){
-    calcularPesoPlanetas();
 }
