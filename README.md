@@ -33,7 +33,7 @@ Angular (https://angular.io)
 
 
 ```
-$ git clone https://github.com/AilenAriosto/rest-countries.git
+$ git clone https://github.com/AilenAriosto/planetas.git
 $ npm install
 
 ```
