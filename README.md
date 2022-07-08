@@ -1,3 +1,18 @@
-# Pagina web para conocer peso en otros planetas
+New component
 
-![alt tag](https://lh3.googleusercontent.com/TuEpZHS0zMprc7WVg5SR3fDJ8Y9mwLn8MRS0Q5nrdSs3xMxeQoPvg_xcoMn599Z4yIj_opZ38fmAtk7gLijrG87cpV2PeQ2hroZoeKhKXk-RCs2us1Ck5TsiH3o5TtUad-pF4JRUBROQYG1TLDpxGdpHNJPytZDWJa9CnulA1GPjctiS3RDj8CHn6m9rgdHuEDO49czskvcanV55-qEyX8GAD0UbnfQk2dhdwHuOxUwzuDgZDhSPcxYQeL71hKjcceaoRIgS_TzEGbI0kxJZeFSQgpJmVr3ikVZjBm_fWWBZXnUboBEdmzsoYHcSbkGkd-THqToyWCc66Ny6xTf2bJ9JGpIj9AHgnLme1IbLqaHGxQL32DpFcJul8zYxJ3VH-3TudyB7p954IDl78FsYUf1aXFC6ENbJp5a2Y4GRJt-qNBN0pSXOZjR_5jL1MdeCwYNAhP1H_U42E4Pbcdoq-2TCpDSeTibNx0NnGif5sGGCzG9yeeqojJ8goxL9NTG0gqRrmY8OLHpGwPLXVaMwx2SvWfKYqVMeUDkoLE2NtzhEbOlsr46Ja7Y5kWpXnf2tw9hzw7Bpz313GlUwhhJMb0Fi5kYTz09xb831CKzisOBZSYJ5obhv26JraL8zxHA0kiK0R-9er_x78XKrKFJd_Vg7koCX4Yni3ilsCfk7EGh6oWVTPP09N2s=w1278-h727-no)
+ng generate component xyz
+
+New angular Material
+ng add @angular/material
+
+Add pwa Support
+ng add @angular/pwa
+
+Add dependency
+ng add _____
+
+Run and watch
+ng test
+
+Build
+ng build

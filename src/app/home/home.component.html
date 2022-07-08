@@ -1,0 +1,26 @@
+<section id="homeComponentId">
+  <article class="animate__animated animate__fadeIn animate__delay-2s animate__slow">
+    <h1> {{ title }} </h1>
+    <p> {{parraf }} </p>
+    <div class="buttonContainer">
+      <input type="number" placeholder="Intoduce tu peso" #weightIn />
+      <a (click)="setWeight(weightIn.value)" class="buttonContainer--button">
+        <span class="iconify" data-icon="dashicons:arrow-right-alt2"></span>
+      </a>
+    </div>
+    <div class="errorContainer">
+      <span *ngIf="value == false" class="errorValue">Por favor, introduce tu peso</span>
+    </div>
+  </article>
+
+  <img id="shuttel" src="../../assets/img/shuttel.png" alt="" class="animate__animated animate__fadeInLeft animate__delay-4s animate__slow">
+  <img id="astronaut" src="../../assets/img/astronaut.png" alt="" class="animate__animated animate__fadeInRight animate__delay-4s animate__slow animate__bounce">
+  <img id="planets" src="../../assets/img/planets/planets.png" alt="" class="animate__animated animate__fadeInUp animate__delay-3s animate__slow">
+  <div class="radarSection animate__animated animate__fadeInUp animate__delay-5s animate__slow">
+    <div id="radarContainer">
+      <img id="radar" src="../../assets/img/radar.png" alt="">
+      <img id="ellipse" src="../../assets/img/Ellipse.png" alt="">
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,61 @@
+<section id="detailsComponentId" >
+
+  <div class="detailsComponentId_container">
+    <nav class="navbar">
+      <button class="navbar-toggler" type="button" (click)="toggleBurguer()">
+        <span class="iconify" data-icon="charm:menu-hamburger"></span>
+      </button>
+      <div class="navbar_listContainer" [ngClass]="{'showBurguer' : checked == true}">
+        <ul class="navbar_ul">
+          <li class="navbar_list">
+            <a class="listPlanet--link" [routerLink] = "['/']">Intro</a>
+          </li>
+          <li *ngFor="let planeta of data, index as i" class="navbar_list">
+            <a class="listPlanet--link" [routerLink] = "['/planetas/',weightPerson, i]" [routerLinkActive]="['listPlanet--link-active']" (click)="planetClick()"> {{ planeta.title }} </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <article *ngIf="!namePlanets">
+      <p>Cargando</p>
+    </article>
+    <article class="detailsComponentId_textContainer animate__animated animate__fadeIn animate__delay-1s animate__slow" >
+      <div>
+        <div [ngSwitch]="namePlanets.title">
+          <h1 class="titlePlanet" *ngSwitchCase="'Tierra'" [ngStyle]="{'background': color[0], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Mercurio'" [ngStyle]="{'background': color[1], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Venus'" [ngStyle]="{'background': color[2], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Marte'" [ngStyle]="{'background': color[3], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Jupiter'" [ngStyle]="{'background': color[4], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Saturno'" [ngStyle]="{'background': color[5], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Urano'" [ngStyle]="{'background': color[6], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } " > {{ namePlanets.title }} </h1>
+          <h1 class="titlePlanet" *ngSwitchCase="'Neptuno'" [ngStyle]="{'background': color[7], 'background-repeat': 'repeat', '-webkit-background-clip': 'text' } "> {{ namePlanets.title }} </h1>
+        </div>
+        <p> {{ namePlanets.parraf }} </p>
+        <div class="distance">
+          <img src="../../assets/img/Button.png" alt="">
+          <p>{{ namePlanets.title }} / Tierra 
+            <span>{{ namePlanets.distance }}</span>
+          </p>
+        </div>
+        <p *ngIf="namePlanets.title !== 'Tierra' else earth">Tu peso en {{ namePlanets.title }} sería de  
+          <span> {{ weightPerson * (namePlanets.weight / 9.8) | math }} </span>
+          Kilos
+        </p>
+        <ng-template #earth>
+          <p>Tu peso en {{ namePlanets.title }} sería de  
+            <span> {{ weightPerson | math }} </span>
+            Kilos
+          </p>
+        </ng-template>
+      </div>
+
+    </article>
+  </div>
+  <img id="astronaut" src="../../assets/img/astronaut.png" alt="" class="animate__animated animate__fadeInRight animate__delay-3s animate__slow animate__bounce">
+  <img id="planets" src="../../assets/img/{{ namePlanets.image }}" alt="" class="animate__animated animate__fadeInUp animate__delay-2s animate__slow">
+  <div id="radarContainer" class="animate__animated animate__zoomIn animate__delay-4s animate__slow">
+    <img id="radar" src="../../assets/img/radar.png" alt="">
+    <img id="ellipse" src="../../assets/img/Ellipse.png" alt="">
+  </div>
+</section>
