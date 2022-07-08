@@ -1,18 +1,54 @@
-New component
+## Planetas - Cuanto pesarias
 
-ng generate component xyz
+### Links
 
-New angular Material
-ng add @angular/material
+- Solution URL: https://github.com/AilenAriosto/planetas
+- Live Site URL: https://planets-angular.netlify.app/
 
-Add pwa Support
-ng add @angular/pwa
+### Built with
 
-Add dependency
-ng add _____
+- HTML5
+- CSS3
+- Responsive Design
+- Scss
+- TypeScript
+- Angular
+- Git
+- JSON
 
-Run and watch
-ng test
+### What I learned
 
-Build
-ng build
+- TypeScript
+- Angular
+
+
+## Prerequisites 📋
+
+Git (https://git-scm.com)
+Nodejs (https://nodejs.org/es/)
+Angular (https://angular.io)
+
+
+## Installing 🔧
+
+
+```
+$ git clone https://github.com/AilenAriosto/rest-countries.git
+$ npm install
+
+```
+
+
+## Deployment 📦
+
+```
+$ ng serve
+```
+
+
+## Author
+
+- Website - Ailen Ariosto (https://ailenariostoportafolio.netlify.app)
+- Diseño - Mehri Fekri - (https://www.figma.com/community/file/1008700519791674277)
+- Github - AilenAriosto (https://github.com/AilenAriosto)
+- Linkedin - Ailen Ariosto (https://www.linkedin.com/in/ailen-ariosto)
