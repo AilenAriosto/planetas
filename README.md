@@ -11,6 +11,8 @@
 - CSS3
 - Responsive Design
 - Scss
+- Animate.css - https://animate.style
+- Wow.js - https://wowjs.uk
 - TypeScript
 - Angular
 - Git
